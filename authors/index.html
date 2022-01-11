@@ -1,4 +1,4 @@
-<!doctype html><html lang=en><meta charset=utf-8>
+<!doctype html><html lang=en dir=ltr><meta charset=utf-8>
 <meta name=viewport content="width=device-width">
 <title>Rami's Blog</title>
 <meta name=generator content="Hugo Eureka 0.8.4">
@@ -27,22 +27,23 @@
 <meta property="og:url" content="https://rami-sabbagh.github.io/authors/">
 <meta property="og:description" content="A personal blog about technology and engineering.">
 <meta property="og:locale" content="en">
+<meta property="og:locale:alternate" content="ar">
 <meta property="og:site_name" content="Rami's Blog">
 <meta property="og:updated_time" content="2019-08-08T00:00:00+02:00">
 <meta property="article:section" content="authors">
 <link rel=alternate type=application/rss+xml href=https://rami-sabbagh.github.io/authors/index.xml title="Rami's Blog">
 <body class="flex flex-col min-h-screen">
-<header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+<header class="fixed flex items-center w-full min-h-16 ps-scrollbar z-50 bg-secondary-bg shadow-sm">
 <div class="w-full max-w-screen-xl mx-auto"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");((storageColorScheme=='Auto'||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementsByTagName('html')[0].classList.add('dark')</script>
 <nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
-<a href=/ class="mr-6 text-primary-text text-xl font-bold">Rami's Blog</a>
+<a href=/ class="me-6 text-primary-text text-xl font-bold">Rami's Blog</a>
 <button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
 <i class="fas fa-bars"></i>
 </button>
 <div id=target class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
 <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
-<a href=/#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">About</a>
-<a href=/posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">Posts</a>
+<a href=/#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent me-4">About</a>
+<a href=/posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent me-4">Posts</a>
 </div>
 <div class=flex>
 <div class="relative pt-4 md:pt-0">
@@ -51,10 +52,22 @@
 </div>
 <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open>
 </div>
-<div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions>
+<div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions>
 <span class="px-4 py-1 hover:text-eureka" name=Light>Light</span>
 <span class="px-4 py-1 hover:text-eureka" name=Dark>Dark</span>
 <span class="px-4 py-1 hover:text-eureka" name=Auto>Auto</span>
+</div>
+</div>
+<div class="relative pt-4 ps-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=languageMode>
+<i class="fas fa-globe"></i>
+<span class=ps-1>English</span>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open-lang>
+</div>
+<div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=languageOptions>
+<a class="px-4 py-1 hover:text-eureka" href=https://rami-sabbagh.github.io/authors/>English</a>
+<a class="px-4 py-1 hover:text-eureka" href=https://rami-sabbagh.github.io/ar/authors/>العربية</a>
 </div>
 </div>
 </div>
@@ -62,11 +75,11 @@
 <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile>
 </div>
 </nav>
-<script>let element=document.getElementById('lightDarkMode');storageColorScheme==null||storageColorScheme=='Auto'?document.addEventListener('DOMContentLoaded',()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change',switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'sun'),element.firstElementChild.classList.add('fa-sun')):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'moon'),element.firstElementChild.classList.add('fa-moon')),document.addEventListener('DOMContentLoaded',()=>{getcolorscheme(),switchBurger()})</script>
+<script>let element=document.getElementById('lightDarkMode');storageColorScheme==null||storageColorScheme=='Auto'?document.addEventListener('DOMContentLoaded',()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change',switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'sun'),element.firstElementChild.classList.add('fa-sun')):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'moon'),element.firstElementChild.classList.add('fa-moon')),document.addEventListener('DOMContentLoaded',()=>{getcolorscheme(),switchBurger(),switchLanguage()})</script>
 </div>
 </header>
 <main class="flex-grow pt-16">
-<div class=pl-scrollbar>
+<div class=ps-scrollbar>
 <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
 <article class="mx-6 my-8">
 <h1 class="font-bold text-3xl text-primary-text">Authors</h1>
@@ -79,7 +92,7 @@
 </div>
 </div>
 </main>
-<footer class=pl-scrollbar>
+<footer class=ps-scrollbar>
 <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
 <p class="text-sm text-tertiary-text">&copy; 2014-2021 Rami Sabbagh
 &#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p>

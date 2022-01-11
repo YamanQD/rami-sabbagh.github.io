@@ -1,0 +1,309 @@
+<!doctype html><html lang=ar dir=rtl><meta charset=utf-8>
+<meta name=viewport content="width=device-width">
+<title>Hacking my router settings | مدوّنة رامي</title>
+<meta name=generator content="Hugo Eureka 0.8.4">
+<link rel=stylesheet href=https://rami-sabbagh.github.io/css/eureka.min.css>
+<script defer src=https://rami-sabbagh.github.io/js/eureka.min.js></script>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload="this.onload=null,this.rel='stylesheet'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js integrity="sha256-uNYoXefWRqv+PsIF/OflNmwtKM4lStn9yrz2gVl6ymo=" crossorigin></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+<script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js integrity="sha256-Zmpaaj+GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE=" crossorigin></script>
+<link rel=preconnect href=https://www.google-analytics.com crossorigin>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RTBP51GY2X"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-RTBP51GY2X')</script>
+<link rel=icon type=image/png sizes=32x32 href=https://rami-sabbagh.github.io/images/miscellaneous/icon_hu18141857779d4856ddf29720ba994c2f_193441_32x32_fill_box_center_3.png>
+<link rel=apple-touch-icon sizes=180x180 href=https://rami-sabbagh.github.io/images/miscellaneous/icon_hu18141857779d4856ddf29720ba994c2f_193441_180x180_fill_box_center_3.png>
+<meta name=description content="A demonstration on how the household routers are insecure.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://rami-sabbagh.github.io/ar/posts/"},{"@type":"ListItem","position":2,"name":"Hacking my router settings","item":"https://rami-sabbagh.github.io/ar/posts/2019-08-08-hacking-my-router-settings/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://rami-sabbagh.github.io/ar/posts/2019-08-08-hacking-my-router-settings/"},"headline":"Hacking my router settings | مدوّنة رامي","image":"https://rami-sabbagh.github.io/images/posts/hacking-my-router-settings/post_image.png","datePublished":"2019-08-08T00:00:00+02:00","dateModified":"2019-08-08T00:00:00+02:00","wordCount":1683,"author":{"@type":"Person","name":["rami-sabbagh"]},"publisher":{"@type":"Person","name":"Rami Sabbagh","logo":{"@type":"ImageObject","url":"https://rami-sabbagh.github.io/images/miscellaneous/icon.png"}},"description":"A demonstration on how the household routers are insecure."}</script><meta property="og:title" content="Hacking my router settings | مدوّنة رامي">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://rami-sabbagh.github.io/images/miscellaneous/icon.png">
+<meta property="og:url" content="https://rami-sabbagh.github.io/ar/posts/2019-08-08-hacking-my-router-settings/">
+<meta property="og:description" content="A demonstration on how the household routers are insecure.">
+<meta property="og:locale" content="ar">
+<meta property="og:locale:alternate" content="en">
+<meta property="og:site_name" content="مدوّنة رامي">
+<meta property="article:published_time" content="2019-08-08T00:00:00+02:00">
+<meta property="article:modified_time" content="2019-08-08T00:00:00+02:00">
+<meta property="article:section" content="posts">
+<body class="flex flex-col min-h-screen">
+<header class="fixed flex items-center w-full min-h-16 ps-scrollbar z-50 bg-secondary-bg shadow-sm">
+<div class="w-full max-w-screen-xl mx-auto"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");((storageColorScheme=='Auto'||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementsByTagName('html')[0].classList.add('dark')</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+<a href=/ar/ class="me-6 text-primary-text text-xl font-bold">مدوّنة رامي</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i>
+</button>
+<div id=target class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+<div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+<a href=/ar/#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent me-4">حول</a>
+<a href=/ar/posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item me-4">المنشورات</a>
+</div>
+<div class=flex>
+<div class="relative pt-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=lightDarkMode>
+<i class="fas fa-adjust"></i>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open>
+</div>
+<div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions>
+<span class="px-4 py-1 hover:text-eureka" name=Light>مضيئ</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>مظلم</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>تلقائي</span>
+</div>
+</div>
+<div class="relative pt-4 ps-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=languageMode>
+<i class="fas fa-globe"></i>
+<span class=ps-1>العربية</span>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open-lang>
+</div>
+<div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=languageOptions>
+<a class="px-4 py-1 hover:text-eureka" href=https://rami-sabbagh.github.io/ar/posts/2019-08-08-hacking-my-router-settings/>العربية</a>
+<a class="px-4 py-1 hover:text-eureka" href=https://rami-sabbagh.github.io/posts/2019-08-08-hacking-my-router-settings/>English</a>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile>
+</div>
+</nav>
+<script>let element=document.getElementById('lightDarkMode');storageColorScheme==null||storageColorScheme=='Auto'?document.addEventListener('DOMContentLoaded',()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change',switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'sun'),element.firstElementChild.classList.add('fa-sun')):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'moon'),element.firstElementChild.classList.add('fa-moon')),document.addEventListener('DOMContentLoaded',()=>{getcolorscheme(),switchBurger(),switchLanguage()})</script>
+</div>
+</header>
+<main class="flex-grow pt-16">
+<div class=ps-scrollbar>
+<div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+<div class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+<h1 class="font-bold text-3xl text-primary-text">Hacking my router settings</h1>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="me-6 my-2">
+<i class="fas fa-calendar me-1"></i>
+<span>2019-08-08</span>
+</div>
+<div class="me-6 my-2">
+<i class="fas fa-clock me-1"></i>
+<span>8 دقائق من القراءة</span>
+</div>
+</div>
+<div class=my-4>
+<img src=https://rami-sabbagh.github.io/images/posts/hacking-my-router-settings/post_image.png class=w-full alt="Featured Image">
+</div>
+<div class=content>
+<p>Hello everyone, it&rsquo;s been 2 years since the last blog post, yea, I&rsquo;m such a lazy blogger 😛</p>
+<p>Many changes have been made to my home&rsquo;s network recently, my dad took full control of it&mldr;</p>
+<p>We have 2 TP-Link routers at home:</p>
+<ul>
+<li>The main one, which connects with ADSL, is named <code>InGodWeTrust_HA</code>,</li>
+<li>The slave one, which is connected with the main one via an ethernet cable, is named <code>InGodWeTrust_Boost</code>.</li>
+</ul>
+<p>What my dad has made was:</p>
+<ul>
+<li>Changed the main router SSID (which was <code>InGodWeTrust_Main</code>) to <code>InGodWeTrust_HA</code></li>
+<li>Changed the main router wifi password, and never gave it to anyone else in the family 😦</li>
+<li>Enabled bandwidth control, gave the full speed for himself, and half the speed only for the <code>Boost</code> router, which we use, and never told anyone about that.</li>
+<li>Made a firewall rule for automatically cutting the internet for everyone (including himself) from 11 PM until 4 AM</li>
+<li>Disabled the firewall rule when he wanted to use the internet after 11 PM&mldr;.</li>
+</ul>
+<p>So he basically took full control of the main router, setting unfair rules for the rest of the family, and not telling anyone about the bandwidth one&mldr;</p>
+<p>Our ADSL speed is 1 Mbps, which is usually 102kbyte/s when stable, and now with his bandwidth rule, all the rest of the family (3 members) gets 50kbytes/s to fight each other for&mldr;</p>
+<p>It&rsquo;s also that the main router is connnected with a battery, so it stays working when the power is out, but the other router (Boost) is not, and so we are left with no internet when the power is out (About 4 hours everyday).</p>
+<p>I once had this conversation with him:</p>
+<pre><code>Me: Dad, could you please disable the bandwidth control ? the internet is really slow 😔
+He replied: There is no bandwidth control!, It's a general issue for the whole building, ask the neighbors.
+I replied: No, I know you dad, you have set us to only have half the speed.
+He replied: I'm not lying, ask the nighboors 😉
+I replied: No you are, please, disable it, at least when you are not here.. 😕
+He replied: This is the situation, deal with, it's not changing. ¯\_(ツ)_/¯
+</code></pre>
+<p>50kb/s is such a pain, everything is slow, youtube lags even at 144p&mldr;</p>
+<p>So I decided it&rsquo;s time to wear my black hat 🕵&mldr;</p>
+<p>He leaves his laptop at home, and it&rsquo;s locked with a password which all the family knows, so, when he was out, I openned the laptop, logged in, and got the <code>HA</code> wifi password out 😉</p>
+<p><img src=/images/posts/hacking-my-router-settings/00-wireless-password.png alt=00-wireless-password.png></p>
+<p>I&rsquo;m now in, that&rsquo;s good, I could enjoy having internet when the power is out, but the 50kb/s limit is still there&mldr;</p>
+<p>I went and started doing some research, I already played with wifislax 3 years ago.</p>
+<p>It&rsquo;s a special linux distro with many wifi tools pre-installed, and ready for hacking, easily installable on a usb stick.</p>
+<p>I know there&rsquo;s kali linux, but it&rsquo;s 2GB download, and you know, the 50kb/s won&rsquo;t help, I have wifislax already downloaded, <em>it is a 3 years old copy</em>, but those things still <em>work</em>.</p>
+<h2 id=knowing-the-router-configurationsettings-webpage>Knowing the router configuration/settings webpage</h2>
+<p>As most routers, the router settings page is at http://192.168.1.1/, and those settings pages, are accessed through http, and you know, it&rsquo;s not encrypted at all!</p>
+<p>Unlike classic routers, this router gives a page with fields for username and password:</p>
+<p><img src=/images/posts/hacking-my-router-settings/00-router-login-page.png alt=00-router-login-page.png></p>
+<p>I downloaded the page, inspected it&rsquo;s content, and found the following javascript code for the login button:</p>
+<pre><code class=language-js>function PCSubWin()
+{	
+	if (isLocked == true)
+	{
+		return ;
+	}
+		
+	var auth;
+	var password = $(&quot;pcPassword&quot;).value;
+	var userName = $(&quot;userName&quot;).value;
+	auth = &quot;Basic &quot;+Base64Encoding(userName+&quot;:&quot;+password);
+	document.cookie = &quot;Authorization=&quot; + auth;
+	window.location.reload();
+}
+</code></pre>
+<p>It&rsquo;s just a simple plaintext cookie 🍪 with the username and password base64 encoded (because of UTF-8 characters support).</p>
+<p>That should be simple, I only have to sniff the wifi packet containing the cookie.</p>
+<p>But no, it turned out it&rsquo;s not that simple, but still easy, I need to capture the connection handshake so I could decrypt the wifi &ldquo;frames&rdquo; (the wifi data being sent in air).</p>
+<h2 id=sniffing-the-authorization-cookie>Sniffing the authorization cookie</h2>
+<blockquote>
+<p>Note: In those pictures I&rsquo;m displaying myself capturing my own mobile sending a fake password, because the original footage was not screenshotted.</p>
+</blockquote>
+<p>Dad came home at 10:30 PM, and it was the time to do the actual work:</p>
+<h3 id=1-booting-wifislax>1. Booting Wifislax</h3>
+<p>I&rsquo;ve install wifislax into my usbstick, and booted it with <code>CopyToRam</code> option, so it runs faster, and lets me use the usb for storing files.</p>
+<h3 id=2-figuring-out-the-router-bssid-and-its-channel>2. Figuring out the router BSSID and it&rsquo;s channel</h3>
+<p><code>Aircrack-ng</code> is such an awesome wifi hacking suit, it contains all the lovely tools you want.</p>
+<p>By executing the following command, I&rsquo;ll be able to know the router BSSID (MAC) and it&rsquo;s channel, which I need both for the next steps:</p>
+<pre><code>airodump-ng wlan0
+</code></pre>
+<p><img src=/images/posts/hacking-my-router-settings/01-list-networks.png alt=01-list-networks.png></p>
+<blockquote>
+<p>(Press <code>Control-C</code> to get back into the prompt)</p>
+</blockquote>
+<p>I&rsquo;ve highlighted my router entry, but blured all the second halves of the mac addresses, for privacy reasons 😉</p>
+<h3 id=3-killing-the-network-manager>3. Killing the network manager</h3>
+<p>I&rsquo;ve read in multiple places, and aircrack itself mentions in the terminal, that the network manager and some other services might cause problems with the sniffing proccess, so it&rsquo;s much better to kill them:</p>
+<pre><code>airmon-ng check kill
+</code></pre>
+<p><img src=/images/posts/hacking-my-router-settings/02-kill-manager.png alt=02-kill-manager.png></p>
+<h3 id=4-enabling-monitor-mode>4. Enabling monitor mode</h3>
+<p>Thankfully, my wifi adapter, which is <code>TP-Link TL-WN722N_V1</code>, supports monitor mode and packets injection.</p>
+<p>I would need the monitor mode inorder to capture all the wifi <em>&ldquo;frames&rdquo;</em> flying around, which contain the cookie we want. It could be enabled with <code>airmon-ng</code>:</p>
+<pre><code>airmon-ng wlan0 11
+</code></pre>
+<p><img src=/images/posts/hacking-my-router-settings/03-enable-monitor-mode.png alt=03-enable-monitor-mode.png></p>
+<blockquote>
+<p><code>11</code> Is the wifi network channel number.</p>
+</blockquote>
+<p>Otherwise the adapter would ignore any packets not belonging to it.</p>
+<h3 id=4-start-the-capturing-proccess-and-find-my-dads-mobile-mac-address>4. Start the capturing proccess, and find my dad&rsquo;s mobile MAC address</h3>
+<p>I&rsquo;ve mounted the usb stick, and created a folder named <code>captures</code>, to store the the captured wifi frames.</p>
+<p>Openned a terminal in that folder, and executed the following command to start the capturing proccess:</p>
+<pre><code>airodump-ng mon0 -c 11 --bssid C0:4A:00:XX:XX:XX -w HAC05
+</code></pre>
+<p><img src=/images/posts/hacking-my-router-settings/04-device-found.png alt=04-device-found.png></p>
+<p>That will capture all the wifi frames received by my adapter, and store them into a <code>.cap</code> file,
+It would also display the list of connected clients, as you see, I&rsquo;ve highlighted the target device in my case (my dad&rsquo;s phone).</p>
+<h3 id=5-deauthunticate-the-target-device>5. Deauthunticate the target device</h3>
+<p>Inorder to successfully decrypt the wifi frames into packets, I have to know the wifi password, and to capture the 4 steps handshake.</p>
+<p>The device is already connected, so I have to deauthunticate it first (so it handshakes again), inorder to do that, I openned another terminal and executed the following:</p>
+<pre><code>aireplay-ng --deauth 10 -a C0:4A:00:XX:XX:XX -c 50:9E:A7:XX:XX:XX mon0
+</code></pre>
+<p>The <code>-a</code> flag specifies the router ESSID, the <code>-c</code> specifies the target device MAC address, <code>--deauth 10</code> specifies that it&rsquo;s a dauth attack with 10 packets.</p>
+<p><img src=/images/posts/hacking-my-router-settings/05-deauth.png alt=05-deauth.png></p>
+<h3 id=6-checking-if-handshake-was-captured>6. Checking if handshake was captured</h3>
+<p>I&rsquo;ve closed the second terminal, and returned to the first one to check if the handshake was captured, and yes it was 🙂</p>
+<p><img src=/images/posts/hacking-my-router-settings/06-handshake-captured.png alt=06-handshake-captured.png></p>
+<h3 id=7-making-dad-open-the-router-settings-page>7. Making dad open the router settings page</h3>
+<p>It&rsquo;s 11:00 PM now, and my dad is asking me to sleep, yea I would usually sleep, but this time I want him to cut the internet (by entering the router settings, and enabling the firewall rule) and force me to sleep,</p>
+<p>So I opened youtube on my phone, and started watching some youtube videos, he got angry and cutted the internet, yeah !</p>
+<h3 id=8-shut-down-the-system>8. Shut down the system</h3>
+<p>Okay now, the cookie has been sniffed, so I terminated the terminal, and shutdown the whole system for the next day,</p>
+<p>If you want to continue using it, you could turn off the monitor mode by typing</p>
+<pre><code>airmon-ng stop mon0
+</code></pre>
+<p><img src=/images/posts/hacking-my-router-settings/07-disable-monitor-mode.png alt=07-disable-monitor-mode.png></p>
+<p>And start the network manager back from the start menu entry</p>
+<p><img src=/images/posts/hacking-my-router-settings/08-start-network-manager.png alt=08-start-network-manager.png></p>
+<h2 id=reading-the-sniffed-cookie-packet>Reading the sniffed cookie packet</h2>
+<p>The next day, I&rsquo;ve booted into Windows, and pulled the files out of the usb stick.</p>
+<h3 id=1-open-the-cap-file-in-wireshark>1. Open the .cap file in wireshark</h3>
+<p><img src=/images/posts/hacking-my-router-settings/09-wireshark.png alt=09-wireshark.png></p>
+<h3 id=2-add-in-the-wifi-password>2. Add in the wifi password</h3>
+<p>Go <code>Edit -> Perferences</code></p>
+<p><img src=/images/posts/hacking-my-router-settings/10-preferences.png alt=10-preferences.png></p>
+<p>Then <code>Protocols -> IEEE 802.11</code>, press <code>Edit...</code> near the <code>Decyption keys</code> text</p>
+<p><img src=/images/posts/hacking-my-router-settings/11-protocol.png alt=11-protocol.png></p>
+<p>Add a new entry, set the type into <code>wpa-pwd</code>, then fill in the wifi password and SSID in the key feed with this format <code>password:ssid</code></p>
+<p><img src=/images/posts/hacking-my-router-settings/12-key.png alt=12-key.png></p>
+<p>Press <code>Ok</code> on each windows until you return back to the main wireshark window</p>
+<h3 id=3-search-for-http-packets-that-include-cookies>3. Search for http packets that include cookies</h3>
+<p>That could be accomplished by using this filter <code>http.cookie && ip.dst == 192.168.1.1</code></p>
+<p>Any packet would work, right click it, then go <code>Follow -> Follow TCP Stream</code></p>
+<p><img src=/images/posts/hacking-my-router-settings/13-follow-tcp-steam.png alt=13-follow-tcp-steam.png></p>
+<h3 id=4-find-the-authorization-cookie-and-decode-it>4. Find the authorization cookie and decode it</h3>
+<p><img src=/images/posts/hacking-my-router-settings/14-cookie-found.png alt=14-cookie-found.png></p>
+<p>Now take that base64 encoded string and decode it</p>
+<pre><code>aGVsbG86ZGVhciByZWFkZXIgIQ== -&gt; hello:dear reader !
+</code></pre>
+<blockquote>
+<p>Sure this is fake login cookie, I wount share you my router login 😛</p>
+</blockquote>
+<h2 id=exploring-the-system>Exploring the system</h2>
+<p>And now I could login and check the bandwidth control which my dad claims to not exist</p>
+<p><img src=/images/posts/hacking-my-router-settings/15-bandwidth-control.png alt=15-bandwidth-control.png></p>
+<ul>
+<li>192.168.1.100: The IP of the other router.</li>
+<li>192.168.1.102-192.168.1.105: The IPs of old router users, which were reserved by MAC</li>
+<li>192.168.1.101: The IP of my dad&rsquo;s mobile, reserved by MAC.</li>
+</ul>
+<p>He has the min speed set to 50% for himself, and the max speed to 100%,
+While the other router users (the rest of the family) has the min speed set to 12% and the max into 50%&mldr;.</p>
+<p>That was easy fix, just untick the box on the top and save.</p>
+<hr>
+<p>I hope my dad forgives me for doing that, I&rsquo;m disabling the bandwidth control when he is out of home, and re-enabling it when he is back, you know, the main rule in hacking is to <em>leave no trace</em>.</p>
+<p>And it would be good for both of us, not harming him, and not harming me.</p>
+<hr>
+<p>Thanks for reading !</p>
+<p>It took me a whole day to write this, please share me your thoughts at <a href=https://twitter.com/ramilego4game>my twitter</a> 😉</p>
+<p>And feel free to support this content by donating to my FOSS project, <a href=https://ramilego4game.itch.io/liko12>LIKO-12</a> 🧡</p>
+<hr>
+<blockquote class=twitter-tweet><p lang=en dir=ltr>It's been 2 years since the last blog post...<br>So it's time for a new one !<br><br>I've been doing some hacking recently... 🕵️‍♀️<br>And here you could find out how I hacked my home's router settings page: <a href=https://t.co/bVcfmlAXn6>https://t.co/bVcfmlAXn6</a><a href="https://twitter.com/hashtag/wifislax?src=hash&ref_src=twsrc%5Etfw">#wifislax</a> <a href="https://twitter.com/hashtag/Hacking?src=hash&ref_src=twsrc%5Etfw">#Hacking</a> <a href="https://twitter.com/hashtag/wireshark?src=hash&ref_src=twsrc%5Etfw">#wireshark</a></p>&mdash; RamiLego4Game (@ramilego4game) <a href="https://twitter.com/ramilego4game/status/1159564546316673025?ref_src=twsrc%5Etfw">August 8, 2019</a></blockquote> <script async src=https://platform.twitter.com/widgets.js></script>
+<hr>
+<p>P.S: Dad, if you are reading this, please don&rsquo;t block me out 😰</p>
+</div>
+<div class=py-2>
+<div class="flex flex-col md:flex-row items-center my-8">
+<a href=https://rami-sabbagh.github.io/ar/authors/rami-sabbagh/ class="w-24 h-24 md:me-4">
+<img src=https://rami-sabbagh.github.io/images/authors/rami-sabbagh.jpg class="w-full bg-primary-bg rounded-full" alt=Avatar>
+</a>
+<div class="w-full md:w-auto mt-4 md:mt-0">
+<a href=https://rami-sabbagh.github.io/ar/authors/rami-sabbagh/ class="block font-bold text-lg pb-1 mb-2 border-b">محمّد رامي صباغ</a>
+<span class="block pb-2">The main writer of this (my personal) blog. Passionate. Self-learner. Love open-source.
+</span>
+<a href=mailto:rami.sab07@gmail.com class=me-1>
+<i class="fas fa-envelope"></i>
+</a>
+<a href=https://twitter.com/rami_sab07 class=me-1>
+<i class="fab fa-twitter"></i>
+</a>
+<a href=https://github.com/Rami-Sabbagh class=me-1>
+<i class="fab fa-github"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+<div>
+</div>
+<div class="md:text-right mt-4 md:mt-0">
+<span class="block font-bold">التالي</span>
+<a href=https://rami-sabbagh.github.io/ar/posts/2017-10-26-liko-12-doodle-1-powder/ class=block>LIKO-12 Doodle #1 - PowderV1.2</a>
+</div>
+</div>
+</div>
+</div>
+<script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad()})</script>
+</div>
+</div>
+</main>
+<footer class=ps-scrollbar>
+<div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+<p class="text-sm text-tertiary-text">&copy; 2014-2021 Rami Sabbagh
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p>
+</div></div>
+</footer>
+</body>
+</html>

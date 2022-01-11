@@ -1,0 +1,545 @@
+<!doctype html><html lang=ar dir=rtl><meta charset=utf-8>
+<meta name=viewport content="width=device-width">
+<title>LIKO-12 Doodle #1 - PowderV1.2 | مدوّنة رامي</title>
+<meta name=generator content="Hugo Eureka 0.8.4">
+<link rel=stylesheet href=https://rami-sabbagh.github.io/css/eureka.min.css>
+<script defer src=https://rami-sabbagh.github.io/js/eureka.min.js></script>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload="this.onload=null,this.rel='stylesheet'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js integrity="sha256-uNYoXefWRqv+PsIF/OflNmwtKM4lStn9yrz2gVl6ymo=" crossorigin></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X media=print onload="this.media='all',this.onload=null" crossorigin>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+<script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js integrity="sha256-Zmpaaj+GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE=" crossorigin></script>
+<link rel=preconnect href=https://www.google-analytics.com crossorigin>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RTBP51GY2X"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-RTBP51GY2X')</script>
+<link rel=icon type=image/png sizes=32x32 href=https://rami-sabbagh.github.io/images/miscellaneous/icon_hu18141857779d4856ddf29720ba994c2f_193441_32x32_fill_box_center_3.png>
+<link rel=apple-touch-icon sizes=180x180 href=https://rami-sabbagh.github.io/images/miscellaneous/icon_hu18141857779d4856ddf29720ba994c2f_193441_180x180_fill_box_center_3.png>
+<meta name=description content="A tutorial on creating a simple powder doodle in LIKO-12.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://rami-sabbagh.github.io/ar/posts/"},{"@type":"ListItem","position":2,"name":"LIKO-12 Doodle #1 - PowderV1.2","item":"https://rami-sabbagh.github.io/ar/posts/2017-10-26-liko-12-doodle-1-powder/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://rami-sabbagh.github.io/ar/posts/2017-10-26-liko-12-doodle-1-powder/"},"headline":"LIKO-12 Doodle #1 - PowderV1.2 | مدوّنة رامي","image":"https://rami-sabbagh.github.io/images/posts/liko-12-doodle-1-powder/Preview.gif","datePublished":"2017-10-26T00:00:00+02:00","dateModified":"2017-10-26T00:00:00+02:00","wordCount":1654,"author":{"@type":"Person","name":["rami-sabbagh"]},"publisher":{"@type":"Person","name":"Rami Sabbagh","logo":{"@type":"ImageObject","url":"https://rami-sabbagh.github.io/images/miscellaneous/icon.png"}},"description":"A tutorial on creating a simple powder doodle in LIKO-12."}</script><meta property="og:title" content="LIKO-12 Doodle #1 - PowderV1.2 | مدوّنة رامي">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://rami-sabbagh.github.io/images/miscellaneous/icon.png">
+<meta property="og:url" content="https://rami-sabbagh.github.io/ar/posts/2017-10-26-liko-12-doodle-1-powder/">
+<meta property="og:description" content="A tutorial on creating a simple powder doodle in LIKO-12.">
+<meta property="og:locale" content="ar">
+<meta property="og:locale:alternate" content="en">
+<meta property="og:site_name" content="مدوّنة رامي">
+<meta property="article:published_time" content="2017-10-26T00:00:00+02:00">
+<meta property="article:modified_time" content="2017-10-26T00:00:00+02:00">
+<meta property="article:section" content="posts">
+<meta property="article:tag" content="LIKO-12">
+<body class="flex flex-col min-h-screen">
+<header class="fixed flex items-center w-full min-h-16 ps-scrollbar z-50 bg-secondary-bg shadow-sm">
+<div class="w-full max-w-screen-xl mx-auto"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");((storageColorScheme=='Auto'||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementsByTagName('html')[0].classList.add('dark')</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+<a href=/ar/ class="me-6 text-primary-text text-xl font-bold">مدوّنة رامي</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i>
+</button>
+<div id=target class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+<div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+<a href=/ar/#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent me-4">حول</a>
+<a href=/ar/posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item me-4">المنشورات</a>
+</div>
+<div class=flex>
+<div class="relative pt-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=lightDarkMode>
+<i class="fas fa-adjust"></i>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open>
+</div>
+<div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions>
+<span class="px-4 py-1 hover:text-eureka" name=Light>مضيئ</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>مظلم</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>تلقائي</span>
+</div>
+</div>
+<div class="relative pt-4 ps-4 md:pt-0">
+<div class="cursor-pointer hover:text-eureka" id=languageMode>
+<i class="fas fa-globe"></i>
+<span class=ps-1>العربية</span>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open-lang>
+</div>
+<div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=languageOptions>
+<a class="px-4 py-1 hover:text-eureka" href=https://rami-sabbagh.github.io/ar/posts/2017-10-26-liko-12-doodle-1-powder/>العربية</a>
+<a class="px-4 py-1 hover:text-eureka" href=https://rami-sabbagh.github.io/posts/2017-10-26-liko-12-doodle-1-powder/>English</a>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile>
+</div>
+</nav>
+<script>let element=document.getElementById('lightDarkMode');storageColorScheme==null||storageColorScheme=='Auto'?document.addEventListener('DOMContentLoaded',()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change',switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'sun'),element.firstElementChild.classList.add('fa-sun')):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'moon'),element.firstElementChild.classList.add('fa-moon')),document.addEventListener('DOMContentLoaded',()=>{getcolorscheme(),switchBurger(),switchLanguage()})</script>
+</div>
+</header>
+<main class="flex-grow pt-16">
+<div class=ps-scrollbar>
+<div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+<div class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+<h1 class="font-bold text-3xl text-primary-text">LIKO-12 Doodle #1 - PowderV1.2</h1>
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="me-6 my-2">
+<i class="fas fa-calendar me-1"></i>
+<span>2017-10-26</span>
+</div>
+<div class="me-6 my-2">
+<i class="fas fa-clock me-1"></i>
+<span>8 دقائق من القراءة</span>
+</div>
+<div class="me-6 my-2">
+<i class="fas fa-folder me-1"></i>
+<a href=https://rami-sabbagh.github.io/ar/categories/doodles/ class=hover:text-eureka>doodles</a>
+</div>
+</div>
+<div class=my-4>
+<img src=https://rami-sabbagh.github.io/images/posts/liko-12-doodle-1-powder/Preview.gif class=w-full alt="Featured Image">
+</div>
+<div class=content>
+<blockquote>
+<p>A powder sandbox in LIKO-12</p>
+</blockquote>
+<p>Creating a powder sandbox in LIKO-12, is not hard at all, it only took me 2 hours to write the whole doodle.</p>
+<p>First, I had to find a way to store the powder canvas, and for this I used an <em>imagedata</em>, but you may be asking, what an imagedata is ?</p>
+<hr>
+<p>The LIKO-12 GPU offers 2 amazing features called <em>images</em> and <em>imagedatas</em>:</p>
+<ul>
+<li>
+<p><strong>Images:</strong> They are like sprites (Sprites are actually images internaly), that you can directly draw to the screen, but without being able to edit them.</p>
+</li>
+<li>
+<p><strong>ImageDatas:</strong> They are the <em>data</em> of an image that you can read pixels from, set pixels to, encode, export to a png, etc.., But without the ability to draw them.</p>
+</li>
+</ul>
+<p>You can convert an ImageData to an Image and vice versa.</p>
+<hr>
+<p>So here I want to create an image with the size of the screen, but leaving some space at the bottom for a toolbar, I can simply achive this by a single call !</p>
+<pre><code class=language-lua>local sw, sh = screenSize() --Returns the size of the screen, so you won't ever have to remember the resolution of LIKO-12 screen :P
+local cw, ch = sw, sh-8 --The powder canvas size, with 8 free pixels from the bottom for the toolbar.
+
+local cimg = imagedata(cw,ch) --The imagedata of the powder canvas, we can easily create one by a single call.
+</code></pre>
+<p>And creating a particle is easy then</p>
+<pre><code class=language-lua>---local sw, sh = screenSize()
+---local cw, ch = sw, sh-8
+
+---local cimg = imagedata(cw,ch)
+
+local parts = {} --A list of particle to update/move.
+
+--Particle X, Particle Y, Particle Color
+local function createParticle(x,y,c)
+	if x &lt; 0 or y &lt; 0 or x &gt; cw-1 or y &gt; ch-1 then return end --Out of bounds.
+	cimg:setPixel(x,y,c) --Set the pixel in the powder canvas.
+	parts[#parts+1] = {x,y} --This way is faster than table.insert()
+end
+</code></pre>
+<p>I had to store the created particles in a table so they get updated each tick until they reach their static state.</p>
+<hr>
+<p>Next I have to hook the <code>createParticle</code> function with the mouse, but wait, what about the mobile devices with multitouch ??
+I can simply handle this by storing each touch position in a table, and simulating the mouse as a touch on desktops.</p>
+<pre><code class=language-lua>Controls(&quot;touch&quot;) --I have to set the controls type to touch for it to work ! (It defaults to the controllers).
+cursor(&quot;point&quot;) --Set the mouse cursor, 'point' is one of the default DiskOS cursors, note that the cursor is not visible on mobile.
+
+---local sw, sh = screenSize()
+---local cw, ch = sw, sh-8
+
+---local cimg = imagedata(cw,ch)
+
+---local parts = {}
+local touch = {} --The touches table.
+
+---local function createParticle(x,y,c)
+---  if x &lt; 0 or y &lt; 0 or x &gt; cw-1 or y &gt; ch-1 then return end
+---	cimg:setPixel(x,y,c)
+---	parts[#parts+1] = {x,y}
+---end
+
+--Touch Events--
+--They should be made globals for LIKO-12 to call them.
+
+--Called when the screen is touched.
+function _touchpressed(id,x,y)
+	touch[id] = {x,y}
+end
+
+--Called when a touch moves.
+function _touchmoved(id,x,y)
+	touch[id][1] = x
+	touch[id][2] = y
+end
+
+--Called when a touch is released.
+function _touchreleased(id,x,y)
+	touch[id] = nil
+end
+
+--Mouse Events--
+--Note: LIKO-12 simulates touch as a mouse by default.
+
+--Called when a mouse button is pressed
+function _mousepressed(x,y,button,istouch)
+	if istouch then return end --We already handle touch events.
+	if button ~= 1 then return end --I only want to handle the left mouse button.
+	_touchpressed(0,x,y)
+end
+
+--Called when the mouse moves.
+function _mousemoved(x,y,dx,dy,istouch)
+	if istouch then return end --We already handle touch events.
+	if not touch[0] then return end --Because the mouse button is not held down.
+	_touchmoved(0,x,y)
+end
+
+--Called when a mouse button is released
+function _mousereleased(x,y,button,istouch)
+	if istouch then return end --We already handle touch events.
+	if button ~= 1 then return end --I only want to handle the left mouse button.
+	_touchreleased(0,x,y)
+end
+</code></pre>
+<p>Now I will create a ticks system and call createParticle in it.</p>
+<pre><code class=language-lua>---Controls(&quot;touch&quot;)
+---cursor(&quot;point&quot;)
+
+---local sw, sh = screenSize()
+---local cw, ch = sw, sh-8
+
+---local cimg = imagedata(cw,ch)
+
+---local parts = {}
+---local touch = {}
+
+---local function createParticle(x,y,c)
+---  if x &lt; 0 or y &lt; 0 or x &gt; cw-1 or y &gt; ch-1 then return end
+---	cimg:setPixel(x,y,c)
+---	parts[#parts+1] = {x,y}
+---end
+
+local function updateTouch()
+	for touchid, pos in pairs(touch) do
+		createParticle(pos[1],pos[2],7) --Create white particles
+	end
+end
+
+local function tick()
+	updateTouch()
+end
+
+--Hook the tick function with LIKO-12 update
+function _update(dt) --The delta time between the update calls.
+	tick()
+end
+
+--Touch Events--
+--[[
+...
+]]
+
+--Mouse Events--
+--[[
+...
+]]
+</code></pre>
+<p>Now it&rsquo;s time to add the powder canvas drawing code.</p>
+<pre><code class=language-lua>--[[
+---Controls(&quot;touch&quot;)
+---cursor(&quot;point&quot;)
+
+...
+
+---local function tick()
+---	updateTouch()
+---end
+]]
+
+--Draws the powder canvas.
+local function drawSandbox()
+	cimg:image():draw(0,0) --Convert it to an image and draw it, it works superfast, even on mobile.
+end
+
+---function _update(dt)
+---	tick()
+---end
+
+function _draw()
+	clear() --Clear the pervious screen.
+	drawSandbox()
+end
+
+--Touch Events--
+--[[
+...
+]]
+
+--Mouse Events--
+--[[
+...
+]]
+</code></pre>
+<hr>
+<p>It&rsquo;s time for a test run !</p>
+<p><img src=/images/posts/liko-12-doodle-1-powder/TestRun1.gif alt="Test Run 1 GIF"></p>
+<hr>
+<p>After that I had to write the particles movement function, and call it in tick:</p>
+<pre><code class=language-lua>--[[
+Controls(&quot;touch&quot;)
+
+...
+
+local function updateTouch() ... end
+]]
+
+local function updateParticle(x,y)
+	local pcol = cimg:getPixel(x,y) --The particle color
+	if cimg:getPixel(x,y+1) == 0 then --If the pixel under the particle is empty
+</code></pre>
+<p><img src=/images/posts/liko-12-doodle-1-powder/PState1.png alt="Particle Case 1"></p>
+<pre><code class=language-lua>		--Move the particle
+		cimg:setPixel(x,y+1,pcol):setPixel(x,y,0)
+			
+		--Return the new position
+		return x,y+1
+		
+	else --Otherwise check the left and right pixels under the particle
+	
+		if cimg:getPixel(x-1,y+1) == 0 then --Check if the particle can move to the left pixel under it.
+</code></pre>
+<p><img src=/images/posts/liko-12-doodle-1-powder/PState2.png alt="Particle Case 2"></p>
+<pre><code class=language-lua>			--Move the particle
+			cimg:setPixel(x-1,y+1,pcol):setPixel(x,y,0)
+			
+			--Return the new position
+			return x-1,y+1
+			
+		elseif cimg:getPixel(x+1,y+1) == 0 then --If not then check if the particle can move to the right pixel under it.
+</code></pre>
+<p><img src=/images/posts/liko-12-doodle-1-powder/PState3.png alt="Particle Case 3"></p>
+<pre><code class=language-lua>			--Move the particle
+			cimg:setPixel(x+1,y+1,pcol):setPixel(x,y,0)
+			
+			--Return the new position
+			return x+1,y+1
+			
+		end
+	end
+end
+
+local function updateSandbox()
+	local nparts, tid = {}, 1 --The particles that are still moving.
+	for i=1,#parts do
+		local nx, ny = updateParticle(unpack(parts[i]))
+		if nx then
+			nparts[tid] = {nx,ny}
+			tid = tid + 1
+		end
+		--If a particle didn't move then it's in a static state -&gt; there's no longer a need to update/move it !
+	end
+	parts = nparts
+end
+
+local function tick()
+	updateTouch()
+	updateSandbox()
+end
+
+--[[
+function _update() ... end
+
+....
+
+End-Of-File
+]]
+</code></pre>
+<p>But there&rsquo;s 1 thing, when the particle is created on the sides of the screen, or when it reaches the bottom of the canvas it will error because of out-of-bound <code>getPixel</code> !
+To avoid that I made 2 edits:</p>
+<h4 id=create-a-border-around-the-cavnas>Create a border around the cavnas:</h4>
+<p><code>imagedata:map(func)</code> call func for each pixel in the imagedata.
+{: .notice_info}</p>
+<pre><code class=language-lua>--[[
+Controls(&quot;touch&quot;)
+
+...
+
+local cimg = imagedata(cw,ch)
+]]
+
+cimg:map(function(x,y,c)
+	if x == 0 or y == 0 or x == cw-1 or y == ch-1 then
+		return 15
+	end
+end)
+
+--The rest of the code
+</code></pre>
+<h4 id=set-the-limits-of-createparticle-to-only-work-inside-the-border-inorder-to-not-replace-the-border>Set the limits of <code>createParticle</code> to only work inside the border (inorder to not replace the border)</h4>
+<pre><code class=language-lua>---....
+local function createParticle(x,y,c)
+	if x &lt; 1 or y &lt; 1 or x &gt; cw-2 or y &gt; ch-2 then return end --This line have been changed !
+	--...
+end
+---....
+</code></pre>
+<hr>
+<p>It&rsquo;s time for another test run !</p>
+<p><img src=/images/posts/liko-12-doodle-1-powder/TestRun2.gif alt="Test Run 2 GIF"></p>
+<hr>
+<p><strong>The final task:</strong> Create the bottom toolbar !</p>
+<p>The bottom toolbar would have:</p>
+<ul>
+<li>A color box, to show the current selected color</li>
+<li>A colors bar with 15 color (black can&rsquo;t be used)</li>
+</ul>
+<h4 id=the-color-box>The color box:</h4>
+<p>I&rsquo;m going to draw a sprite, and use <code>pal()</code> to change the color inside of it:</p>
+<p><code>pal(c1,c2)</code> Changes <code>c1</code> to have the color of <code>c2</code>.
+{: .notice_info}</p>
+<p><img src=/images/posts/liko-12-doodle-1-powder/ColorBox.png alt="Colorbox Sprite"></p>
+<h4 id=the-colors-bar>The colors bar:</h4>
+<p>I&rsquo;ll use a useful function provided by DiskOS named <code>whereInGrid(mx,my,grid)</code></p>
+<p>The grid definition: <code>{Grid Top-Left X, Grid Top-Left Y, Grid Width in Pixels, Grid Height in Pixels, The number of the columns, The number of rows}</code>
+{: .notice_info}</p>
+<p>That grid function will take a mouse position, and return the position of the cell that the mouse is hovering over in cells.</p>
+<p>And for the colors bar drawing I&rsquo;ll create an image with the 15 color, and scale it by 8 when drawing it.</p>
+<hr>
+<pre><code class=language-lua>---....
+---cimg:map(...)
+
+local pimg = imagedata(15,1)
+local __c = 0 --A temp variable
+pimg:map(function(x,y,c)
+	__c = __c + 1
+	return __c
+end)
+__c = nil
+pimg = pimg:image() --Convert it to a drawable image
+
+local palgrid = {sw-8*15,sh-8, 8*15,8, 15, 1}
+
+---local parts...
+---local touch...
+
+local selcol = 4 --The selected color id
+
+---....
+
+local function updateTouch()
+ for touchid, pos in pairs(touch) do
+  createParticle(pos[1],pos[2],selcol) --Now passes selcol instead of 7.
+ end
+end
+
+---....
+
+---local function drawSandbox() ... end
+
+--Draws the toolbar
+local function drawToolbar()
+	rect(0,sh-8,sw,8,false,9) --Draws an orange rectangle bar.
+	pal(15,selcol) --Change the color 15 to the selection color.
+	Sprite(0, 0, sh-8) --Draw the sprite 0 (ColorBox) at the left side of the toolbar.
+	pal(15,15) --Set color 15 back to it's original color.
+	pimg:draw(palgrid[1],palgrid[2], 0, 8,8) --Draw the palette/colors bar image.
+end
+
+---function _update() ... end
+
+function _draw()
+ clear() --Clear the pervious screen.
+ drawSandbox()
+ drawToolbar()
+end
+
+---...
+
+--The toolbar doesn't have to handle multitouch, so I will put it's handling code in _mousepressed.
+function _mousepressed(x,y,button,istouch)
+ --Since it's handled before the istouch conditional then it will work for both mouse and touch.
+ local cx, cy = whereInGrid(x,y,palgrid)
+ if cx then selcol = cx end
+ 
+ if istouch then return end --We already handle touch events.
+ if button ~= 1 then return end --I only want to handle the left mouse button.
+ _touchpressed(0,x,y)
+end
+
+--- To the end of the file.
+</code></pre>
+<hr>
+<p>That&rsquo;s it, you got a full clone of my powder doodle !</p>
+<p><img src=/images/posts/liko-12-doodle-1-powder/Result.gif alt="Result GIF"></p>
+<hr>
+<p>Oh, and you may notice that the sandbox ticks so slow, for that we can do a very simple patch in <code>_update</code>:</p>
+<pre><code class=language-lua>function _update(dt)
+ for i=1,5 do --To speedup the simulation, you can change 5 to whatever you want (but not negative !).
+  tick()
+ end
+end
+</code></pre>
+<p><img src=/images/posts/liko-12-doodle-1-powder/Final.gif alt="Final GIF"></p>
+<p>You can get the final version by typing in LIKO-12 terminal:</p>
+<pre><code>pastebin get x1yDaTxk powderV1.2.lk12
+load powderV1.2
+run
+</code></pre>
+<hr>
+<p>Thanks for reading !</p>
+<p>I hope you enjoyed it, Feel free to support my work by donating to <a href=http://ramilego4game.itch.io/liko12>LIKO-12</a> :)</p>
+<hr>
+</div>
+<div class=my-4>
+<a href=https://rami-sabbagh.github.io/ar/tags/liko-12/ class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#LIKO-12</a>
+</div>
+<div class=py-2>
+<div class="flex flex-col md:flex-row items-center my-8">
+<a href=https://rami-sabbagh.github.io/ar/authors/rami-sabbagh/ class="w-24 h-24 md:me-4">
+<img src=https://rami-sabbagh.github.io/images/authors/rami-sabbagh.jpg class="w-full bg-primary-bg rounded-full" alt=Avatar>
+</a>
+<div class="w-full md:w-auto mt-4 md:mt-0">
+<a href=https://rami-sabbagh.github.io/ar/authors/rami-sabbagh/ class="block font-bold text-lg pb-1 mb-2 border-b">محمّد رامي صباغ</a>
+<span class="block pb-2">The main writer of this (my personal) blog. Passionate. Self-learner. Love open-source.
+</span>
+<a href=mailto:rami.sab07@gmail.com class=me-1>
+<i class="fas fa-envelope"></i>
+</a>
+<a href=https://twitter.com/rami_sab07 class=me-1>
+<i class="fab fa-twitter"></i>
+</a>
+<a href=https://github.com/Rami-Sabbagh class=me-1>
+<i class="fab fa-github"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+<div>
+<span class="block font-bold">السابق</span>
+<a href=https://rami-sabbagh.github.io/ar/posts/2019-08-08-hacking-my-router-settings/ class=block>Hacking my router settings</a>
+</div>
+<div class="md:text-right mt-4 md:mt-0">
+<span class="block font-bold">التالي</span>
+<a href=https://rami-sabbagh.github.io/ar/posts/2015-09-29-physicsgun-update/ class=block>Physicsgun Update</a>
+</div>
+</div>
+</div>
+</div>
+<script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad()})</script>
+</div>
+</div>
+</main>
+<footer class=ps-scrollbar>
+<div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+<p class="text-sm text-tertiary-text">&copy; 2014-2021 Rami Sabbagh
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p>
+</div></div>
+</footer>
+</body>
+</html>
